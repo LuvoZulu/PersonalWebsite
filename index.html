@@ -3,9 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luvo's Portfolio</title>
+    <title>Luvo Zulu | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        html { scroll-behavior: smooth; }
+
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10rem 2rem 6rem;
+        }
+
+        .section-content h2 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 5rem;
+            background: linear-gradient(90deg, #c4a0ff, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(162, 82, 255, 0.15);
+            border-radius: 20px;
+            padding: 2.2rem 2rem 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            background: rgba(162, 82, 255, 0.08);
+            border-color: 1px solid #a78bfa;
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(147, 51, 234, 0.25);
+        }
+
+        .card h3 {
+            font-size: 1.55rem;
+            margin-bottom: 0.8rem;
+            color: #e0d0ff;
+        }
+
+        .card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #e0d0ff;
+        }
+
+        .card .date {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.55);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .card p:not(.date) {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 1.6rem;
+            margin-bottom: 0.6rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .card ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #a78bfa;
+        }
+
+        .skill-category {
+            margin-bottom: 4rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.8rem;
+            color: #a78bfa;
+            margin-bottom: 1.8rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .tag {
+            padding: 0.85rem 1.8rem !important;
+            font-size: 0.95rem !important;
+        }
+    </style>
 </head>
 <body>
     <img class="image-gradient" src="./assets/gradient.png" alt="gradient">
@@ -14,22 +122,22 @@
     <div class="container">
         <header>
             <nav>
-                <a data-aos="fade-down" data-aos-duration="2000" href="#">Education</a>
-                <a data-aos="fade-down" data-aos-duration="2500" href="#">Certifications</a>
-                <a data-aos="fade-down" data-aos-duration="3000" href="#">Project</a>
-                <a data-aos="fade-down" data-aos-duration="3500" href="#">Skills</a>
+                <a data-aos="fade-down" data-aos-duration="2000" href="#EdSec">Education</a>
+                <a data-aos="fade-down" data-aos-duration="2500" href="#CertSec">Certifications</a>
+                <a data-aos="fade-down" data-aos-duration="3000" href="#ProjSec">Projects</a>
+                <a data-aos="fade-down" data-aos-duration="3500" href="#ExpSec">Experience</a>
+                <a data-aos="fade-down" data-aos-duration="4000" href="#SkillSec">Skills</a>
             </nav>
         </header>
     </div>
 
     <main>
-        
     <div class="content">
         <div data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
      data-aos-delay="300"
      data-aos-offset="0" data-aos-duration="1500" class="tag-box">
-            <div class="tag">Hi, there</div>
+            <div class="tag">Available for internships</div>
         </div>
 
         <h1 data-aos="fade-zoom-in"
@@ -41,21 +149,15 @@
      data-aos-easing="ease-in-back"
      data-aos-delay="300"
      data-aos-offset="0" data-aos-duration="2500" class="description">
-            Wits Computer Science student with hands-on experience building security operations tools and monitoring systems. Passionate about threat detection, incident response, and developing solutions that help SOC teams identify and respond to cyber threats in real-time. Actively pursuing cybersecurity through practical projects, industry certifications, and continuous self-learning
+            Computer Science student building real-time security operations tools with a focus on threat detection, incident response, and SOC automation. Passionate about turning complex threats into actionable intelligence through code.
         </p>
 
         <div data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
      data-aos-delay="300"
      data-aos-offset="0" data-aos-duration="3000" class="buttons">
-            <a data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0" data-aos-duration="3500" href="https://github.com/LuvoZulu" class="button">Github</a>
-            <a data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0" data-aos-duration="4000" href="https://linkedin.com/in/luvo-zulu-079628253" class="button1">Linkedin</a>
+            <a href="https://github.com/LuvoZulu" class="button">GitHub</a>
+            <a href="https://linkedin.com/in/luvo-zulu-079628253" class="button1">LinkedIn</a>
         </div>
 
         <spline-viewer data-aos="fade-zoom-in"
@@ -69,29 +171,206 @@
         <spline-viewer class="spline-viewer" url="https://prod.spline.design/ii4ChH1cB54eXfY3/scene.splinecode"></spline-viewer>
     </section>
 
+    <!-- EDUCATION -->
     <section class="Education-section" id="EdSec">
-
+        <div class="section-content">
+            <h2 data-aos="fade-up">Education</h2>
+            <div class="grid">
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>BSc Computer Science & Applied Mathematics</h3>
+                    <p class="institution">University of the Witwatersrand, Johannesburg</p>
+                    <p class="date">2022 – Present</p>
+                    <p>Relevant Coursework: Network Security · Operating Systems · Software Design · Algorithm Analysis · Scientific Computing</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>High School</h3>
+                    <p class="institution">Vhaluvhu Secondary School, Limpopo</p>
+                    <p class="date">2017 – 2021</p>
+                    <p>Focus: Mathematics & Physical Sciences</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- CERTIFICATIONS -->
     <section class="Certification-section" id="CertSec">
-
+        <div class="section-content">
+            <h2 data-aos="fade-up">Certifications & Training</h2>
+            <div class="grid">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h4>JPMorgan Chase Cybersecurity Job Simulation</h4>
+                    <p>Practical SOC Analyst Experience · Forage</p>
+                    <p class="date">Jun – Jul 2024</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Fortinet Certified Fundamentals in Cybersecurity</h4>
+                    <p class="date">Apr – May 2024</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Threat Intelligence & Threat Landscape · Fortinet</h4>
+                    <p class="date">Apr – May 2024</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Introduction to Cybersecurity · Cisco</h4>
+                    <p class="date">May 2024</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
+                    <h4>PowerShell Scripting · Microsoft Learn</h4>
+                    <p class="date">Feb 2025</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="600">
+                    <h4>Bash Scripting · DataCamp</h4>
+                    <p class="date">Nov 2024</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="Project-section" id="ProjSec">
+        <div class="section-content">
+            <h2 data-aos="fade-up">Projects</h2>
+            <div class="grid">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Enterprise SOC Networking Application</h3>
+                    <p class="date">Mar 2025 – Present</p>
+                    <p>Cross-platform real-time network visibility & monitoring system built from scratch for SOCs & IT teams.</p>
+                    <ul>
+                        <li>Secure device-to-device communication protocol for centralized monitoring</li>
+                        <li>Anomaly detection, administrative controls, and actionable intelligence</li>
+                        <li>Designed for scalability and rapid incident response</li>
+                    </ul>
+                </div>
 
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Vlog — Lightweight Security Logging Driver</h3>
+                    <p class="date">Dec 2024 – Present</p>
+                    <p>Kernel-level Windows driver (cross-platform planned) for tamper-proof security event logging.</p>
+                    <ul>
+                        <li>Real-time system event capture with secure storage</li>
+                        <li>Log filtering & export for SOC investigations</li>
+                        <li>Currently in active development — aiming for enterprise-grade reliability</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Keylogger Analysis Tool (Educational)</h3>
+                    <p class="date">Feb 2024 – May 2025</p>
+                    <p>Built a functional keylogger to deeply understand attack vectors and detection techniques used in modern EDR systems.</p>
+                    <ul>
+                        <li>Studied evasion methods and defensive countermeasures</li>
+                        <li>Practical insight into endpoint security and behavioral detection</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="700">
+                    <h3>High-Performance Game of Life Visualizer</h3>
+                    <p class="date">Feb 2023 – May 2024</p>
+                    <p>Multi-threaded C/C++ application achieving real-time visualization at high speed.</p>
+                    <ul>
+                        <li>Parallel computing & system optimization</li>
+                        <li>Used as foundation for performance-critical security tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- EXPERIENCE -->
+    <section class="Experience-section" id="ExpSec">
+        <div class="section-content">
+            <h2 data-aos="fade-up">Experience</h2>
+            <div class="grid">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Computer Science Tutor</h3>
+                    <p>Wits School of Computer Science & Applied Mathematics</p>
+                    <p class="date">Feb 2025 – Oct 2025</p>
+                    <ul>
+                        <li>Guide students through complex programming concepts, debugging, and lab work</li>
+                        <li>Highly valued for clear technical explanations — directly transferable to SOC reporting</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Private Tutor · TLM Tutoring Company</h3>
+                    <p class="date">Mar 2023 – Mar 2025</p>
+                    <ul>
+                        <li>Diagnose knowledge gaps and create targeted learning strategies</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Chairperson — Knockando Halls of Residence</h3>
+                    <p>University of the Witwatersrand</p>
+                    <p class="date">Nov 2023 – Jun 2024</p>
+                    <ul>
+                        <li>Led committee, oversaw events, ensured accountability and delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
     <section class="Skills-section" id="SkillSec">
+        <div class="section-content">
+            <h2 data-aos="fade-up">Skills</h2>
 
+            <div class="skill-category" data-aos="fade-up">
+                <h3>Cybersecurity</h3>
+                <div class="skills-grid">
+                    <div class="tag-box"><div class="tag">Threat Intelligence</div></div>
+                    <div class="tag-box"><div class="tag">Network Security</div></div>
+                    <div class="tag-box"><div class="tag">Security Monitoring</div></div>
+                    <div class="tag-box"><div class="tag">Log & Vuln Analysis</div></div>
+                    <div class="tag-box"><div class="tag">SIEM & EDR</div></div>
+                    <div class="tag-box"><div class="tag">MITRE ATT&CK</div></div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up">
+                <h3>Programming</h3>
+                <div class="skills-grid">
+                    <div class="tag-box"><div class="tag">Python</div></div>
+                    <div class="tag-box"><div class="tag">C/C++</div></div>
+                    <div class="tag-box"><div class="tag">Java</div></div>
+                    <div class="tag-box"><div class="tag">Bash / PowerShell</div></div>
+                    <div class="tag-box"><div class="tag">Kernel Development</div></div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up">
+                <h3>Tools & Practices</h3>
+                <div class="skills-grid">
+                    <div class="tag-box"><div class="tag">Git / GitHub</div></div>
+                    <div class="tag-box"><div class="tag">Agile</div></div>
+                    <div class="tag-box"><div class="tag">OOP</div></div>
+                    <div class="tag-box"><div class="tag">Software Design</div></div>
+                    <div class="tag-box"><div class="tag">HPC</div></div>
+                    <div class="tag-box"><div class="tag">ASN.1 / RFC</div></div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up">
+                <h3>Soft Skills</h3>
+                <div class="skills-grid">
+                    <div class="tag-box"><div class="tag">Analytical Thinking</div></div>
+                    <div class="tag-box"><div class="tag">Problem Solving</div></div>
+                    <div class="tag-box"><div class="tag">Communication</div></div>
+                    <div class="tag-box"><div class="tag">Leadership</div></div>
+                </div>
+            </div>
+        </div>
     </section>
-
 
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.0/build/spline-viewer.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    
-  <script>
-    AOS.init();
-  </script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease'
+        });
+    </script>
 </body>
 </html>
