@@ -1,0 +1,306 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #000;
+    color: white;
+    min-height: 100vh;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* BG GRADIENT IMAGE */
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+    max-width: 50%;
+}
+
+/* PURPLE SIDE GLOW */
+.layer-blur {
+    position: absolute;
+    height: 40rem;
+    width: 40rem;
+    top: 20%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(162, 82, 255, 0.25), transparent 70%);
+    filter: blur(120px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* FIXED CONTAINER SPELLING */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+/* HEADER + NAV */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5rem;
+    position: relative;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+nav a {
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* MAIN HERO LAYOUT */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    position: relative;
+    padding-top: 4rem;
+}
+
+.content{
+    max-width: 50rem;
+    margin-left: 10%;
+    margin-top: -5rem;
+}
+
+.tag-box{
+    position: relative;
+    width: fit-content;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.tag-box::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 2px;
+    background: linear-gradient(90deg, #656565, #7f42a7, #6600c5, #5300a0, #757575);
+    background-size: 200%;
+    animation: animationGradient 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@keyframes animationGradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+.tag-box .tag{
+    position: relative;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.tag-box .tag:hover{
+    color: #a78bfa;
+}
+
+.content h2{
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 1.5rem 0;
+    line-height: 1.1;
+    text-shadow: 0 0 30px rgba(147, 51, 234, 0.2);
+}
+
+.description{
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    max-width: 40rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.button{
+    text-decoration: none;
+    color: #a78bfa;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.button:hover{
+    background-color: rgba(147, 51, 234, 0.1);
+    border-color: rgba(147, 51, 234, 0.5);
+}
+
+.button1{
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.button1:hover{
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .header {
+        padding: 2rem 3rem;
+    }
+    
+    .content {
+        margin-left: 5%;
+    }
+    
+    .content h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Hides nav, keeps layout clean */
+    nav {
+        display: none;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        margin-left: 10%;
+        max-width: 30rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+.robot-3d{
+    position: absolute;
+    top: 0;
+    right: -20%;
+}
+
+.particles-section {
+            width: 100%;
+            height: 100vh;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .particles-section spline-viewer {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+@media (max-width: 1300px) {
+    .header{
+        padding: 1rem 0.5rem;
+    }
+
+    .content{
+        margin-top: 85%;
+    }
+
+    .robot-3d{
+        scale: 0.8;
+        top: -20%;
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .button{
+        padding: 0.6rem;
+    }
+
+    .tag-box{
+        width: 12rem;
+    }
+
+    .content h1{
+        font-size: 2.5rem;
+    }
+
+    .description{
+        font-size: 1rem;
+    }
+}
